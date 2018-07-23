@@ -1,37 +1,5 @@
-## You Don't Need jQuery
-
-오늘날 프론트엔드 개발 환경은 급격히 진화하고 있고, 모던 브라우저들은 이미 충분히 많은 DOM/BOM API들을 구현했습니다. 우리는 jQuery를 DOM 처리나 이벤트를 위해 처음부터 배울 필요가 없습니다. React, Angular, Vue같은 프론트엔드 라이브러리들이 주도권을 차지하는 동안 DOM을 바로 처리하는 것은 안티패턴이 되었고, jQuery의 중요성은 줄어들었습니다. 이 프로젝트는 대부분의 jQuery 메소드의 대안을 IE 10 이상을 지원하는 네이티브 구현으로 소개합니다.
-
-## 목차
-
-1. [번역](#번역)
-1. [Query Selector](#query-selector)
-1. [CSS & Style](#css--style)
-1. [DOM 조작](#dom-조작)
-1. [Ajax](#ajax)
-1. [이벤트](#이벤트)
-1. [유틸리티](#유틸리티)
-1. [Promises](#promises)
-1. [Animation](#animation)
-1. [대안방법](#대안방법)
-1. [브라우저 지원](#브라우저-지원)
-
-## 번역
-
-* [한국어](./README.ko-KR.md)
-* [简体中文](./README.zh-CN.md)
-* [Bahasa Melayu](./README-my.md)
-* [Bahasa Indonesia](./README-id.md)
-* [Português(PT-BR)](./README.pt-BR.md)
-* [Tiếng Việt Nam](./README-vi.md)
-* [Español](./README-es.md)
-* [Русский](./README-ru.md)
-* [Кыргызча](./README-kg.md)
-* [Türkçe](./README-tr.md)
-* [Italiano](./README-it.md)
-* [Français](./README-fr.md)
-* [日本語](./README-ja.md)
-* [Polski](./README-pl.md)
+## 원본 : You Don't Need jQuery
+필요한거 추가해서 사용중
 
 ## Query Selector
 
@@ -943,6 +911,38 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   });
   ```
 
+  + each 문의 break
+
+  each 에서 break 를 사용하는 방법 입니다.
+
+  ```js
+  // jQuery
+  $.each(array, (index, value) => {
+    return true;
+  });
+
+  // Native
+  array.forEach((value, index) => {
+    break;
+  });
+  ```
+
+  + each 문의 continue
+
+  each 에서 continue 를 사용하는 방법 입니다.
+
+  ```js
+  // jQuery
+  $.each(array, (index, value) => {
+    return false;
+  });
+
+  // Native
+  array.forEach((value, index) => {
+    continue;
+  });
+  ```
+  
   + grep
 
   배열에서 필터 함수를 만족하는 엘리먼트를 찾습니다.
