@@ -1,5 +1,5 @@
-## 원본 : You Don't Need jQuery
-필요한거 추가해서 사용중
+## 원본 : https://github.com/nefe/
+개인용으로 필요한거 추가해서 사용중
 
 ## Query Selector
 
@@ -253,8 +253,6 @@
     el.dataset['foo'];
     ```
 
-**[⬆ 목차로 돌아가기](#목차)**
-
 ## CSS & Style
 
 - [2.1](#2.1) <a name='2.1'></a> CSS
@@ -422,8 +420,6 @@
   // Native
   (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
   ```
-
-**[⬆ 목차로 돌아가기](#목차)**
 
 ## DOM 조작
 
@@ -664,8 +660,6 @@
     </ol>`);
     ```
 
-**[⬆ 목차로 돌아가기](#목차)**
-
 ## Ajax
 
 [Fetch API](https://fetch.spec.whatwg.org/) 는 XMLHttpRequest를 ajax로 대체하는 새로운 표준 입니다. Chrome과 Firefox에서 작동하며, polyfill을 이용해서 구형 브라우저에서 작동되도록 만들 수도 있습니다.
@@ -683,8 +677,6 @@ IE9 이상에서 지원하는 [github/fetch](http://github.com/github/fetch) 혹
     document.querySelector(selector).innerHTML = data
   }).then(completeCallback)
   ```
-
-**[⬆ 목차로 돌아가기](#목차)**
 
 ## 이벤트
 
@@ -741,8 +733,6 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   el.dispatchEvent(event);
   ```
-
-**[⬆ 목차로 돌아가기](#목차)**
 
 ## 유틸리티
 
@@ -1104,8 +1094,6 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   JSON.parse(str);
   ```
 
-**[⬆ 목차로 돌아가기](#목차)**
-
 ## Promises
 
 Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체적인 promise 처리를 가지고 있습니다. 네이티브 JavaScript엔 [Promises/A+](http://promises-aplus.github.io/promises-spec/) 명세에 맞는 얇고 작은 API를 구현되어 있습니다.
@@ -1195,8 +1183,6 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
     return defer.promise();
   }
   ```
-
-**[⬆ 목차로 돌아가기](#목차)**
 
 ## Animation
 
@@ -1326,8 +1312,6 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
   )
   ```
 
-**[⬆ 목차로 돌아가기](#목차)**
-
 ## 대안방법
 
 * [You Might Not Need jQuery](http://youmightnotneedjquery.com/) - 일반 자바스크립트로 공통이벤트, 엘리먼트, ajax 등을 다루는 방법 예제.
@@ -1341,7 +1325,7 @@ Latest ✔ | Latest ✔ | 10+ ✔ | Latest ✔ | 6.1+ ✔ |
 
 # License
 
-MIT
+https://github.com/nefe/
 
 [chrome-image]: https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png
 [firefox-image]: https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png
