@@ -1,5 +1,5 @@
-## 원본 : https://github.com/nefe/
-개인용으로 필요한거 추가해서 사용중
+## 출처 : https://github.com/nefe/
+필요한거 추가해서 사용중
 
 ## Query Selector
 
@@ -1323,7 +1323,7 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | 10+ ✔ | Latest ✔ | 6.1+ ✔ |
 
-# License
+# 출처
 
 https://github.com/nefe/
 
