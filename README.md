@@ -908,7 +908,7 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   ```js
   // jQuery
   $.each(array, (index, value) => {
-    return true;
+    return false;
   });
 
   // Native
@@ -924,7 +924,7 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   ```js
   // jQuery
   $.each(array, (index, value) => {
-    return false;
+    return true;
   });
 
   // Native
