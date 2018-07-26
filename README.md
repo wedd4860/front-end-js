@@ -749,6 +749,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   // Native
   Array.isArray(array);
+
+  // lodash
+  _.isArray(array);
   ```
 
   + isWindow
@@ -777,6 +780,11 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   // ES6 방식
   array.includes(item);
+
+  // lodash
+  _.findIndex(array,(values) => {
+    return values === '값'
+  });
   ```
 
   + isNumeric
@@ -792,6 +800,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   function isNumeric(value) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
+
+  // lodash 형까지 일치해야 true를 반환합니다.
+  _.isNumber(item);
   ```
 
   + isFunction
@@ -824,6 +835,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   function isEmptyObject(obj) {
     return Object.keys(obj).length === 0;
   }
+
+  // lodash
+  _.isObject(obj);
   ```
 
   + isPlainObject
@@ -847,6 +861,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
     return true;
   }
+
+  // lodash
+  _.isPlainObject(obj);
   ```
 
   + extend
@@ -857,9 +874,15 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   ```js
   // jQuery
   $.extend({}, defaultOpts, opts);
-
+  // jQuery ex
+  $.extend({1:1,2:2,3:3}, {4:4})
+  {1: 1, 2: 2, 3: 3, 4: 4}
+  
   // Native
   Object.assign({}, defaultOpts, opts);
+
+  // lodash
+  _.assignIn(defaultOpts, opts);
   ```
 
   + trim
@@ -872,6 +895,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   // Native
   string.trim();
+
+  // lodash
+  _.trim(string);
   ```
 
   + map
@@ -910,7 +936,7 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   });
 
   // lodash object
-  _.forEach(object, (value, index => {
+  _.forEach(object, (value, index) => {
   });
 
   // lodash array
@@ -962,6 +988,11 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   // Native
   array.filter((value, index) => {
   });
+
+  // lodash
+  _.filter(array,(value) => {
+    return value === '값'
+  })
   ```
 
   + type
