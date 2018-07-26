@@ -1,5 +1,6 @@
-## 출처 : https://github.com/nefe/
-필요한거 추가해서 사용중
+## 필요한거 추가 하여 개인용으로 사용
+jQuery : http://jquery.com/
+lodash : https://lodash.com/
 
 ## Query Selector
 
@@ -534,7 +535,7 @@
   el.insertAdjacentHTML('afterend', '<div id="container">Hello World</div>');
 
   // Native (엘리먼트)
-  onst el = document.querySelector(selector);
+  const el = document.querySelector(selector);
   if (el.parentNode) {
     el.parentNode.insertBefore(newEl, el.nextSibling);
   }
@@ -885,6 +886,10 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   // Native
   array.map((value, index) => {
   });
+
+  // lodash
+  _.map(array,(value, index) => {
+  });
   ```
 
   + each
@@ -902,6 +907,14 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   // Native
   array.forEach((value, index) => {
+  });
+
+  // lodash object
+  _.forEach(object, (value, index => {
+  });
+
+  // lodash array
+  _.forEach(array, (value) => {
   });
   ```
 
@@ -989,6 +1002,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   function merge(...args) {
     return Array.from(new Set([].concat(...args)))
   }
+
+  // lodash 객체만 합치기가 가능합니다.
+  _.merge(object1, object2);
   ```
 
   + now
@@ -1001,6 +1017,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   // Native
   Date.now();
+
+  // lodash
+  _.now();
   ```
 
   + proxy
@@ -1017,7 +1036,7 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
 
   + makeArray
 
-  array-like 한 객체를 진짜 JavaScript 배열로 변환합니다.
+  array-like 한 객체를 진짜 JavaScript 배열로 변환합니다. tag의 순서를 바꿀때 많이 사용 합니다.
 
   ```js
   // jQuery
