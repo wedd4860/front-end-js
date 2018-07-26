@@ -897,7 +897,7 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   });
   
   // jQuery DOM
-  $('selector').each((index, value)=>{
+  $el.each((index, value)=>{
   });
 
   // Native
