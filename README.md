@@ -1,6 +1,8 @@
-## 필요한거 추가 하여 개인용으로 사용
-jQuery : http://jquery.com/
-lodash : https://lodash.com/
+## 개인용으로 사용
+
+라이브러리 URL
+* jQuery : http://jquery.com/
+* lodash : https://lodash.com/
 
 ## Query Selector
 
@@ -79,10 +81,12 @@ lodash : https://lodash.com/
     [...el.parentNode.children].filter((child) =>
       child !== el
     );
+
     // Native (alternative) - latest, Edge13+
     Array.from(el.parentNode.children).filter((child) =>
       child !== el
     );
+
     // Native - IE10+
     Array.prototype.filter.call(el.parentNode.children, (child) =>
       child !== el
@@ -679,6 +683,29 @@ IE9 이상에서 지원하는 [github/fetch](http://github.com/github/fetch) 혹
   }).then(completeCallback)
   ```
 
+- [4.2](#4.2) <a name='4.2'></a> 많이 사용하는 방법
+
+  ```js
+  // jQuery  
+  var post = {
+    'key name 1': value,
+    'key name 2': value,
+    };
+  $.ajax({url: 'url'
+    ,type: 'POST'
+    ,dataType: 'json'
+    ,data : { 'post': post }
+    , success : function(res) {
+        //성공
+    }
+    , error: function(request, status, error) {
+        //실패
+    }
+    , beforeSend: function(xhr) {
+        //전송 전
+    }
+  });
+  ```
 ## 이벤트
 
 namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 https://github.com/oneuijs/oui-dom-events 를 고려해보세요.
@@ -735,6 +762,25 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   el.dispatchEvent(event);
   ```
 
+- [5.4](#5.4) <a name='5.4'></a> form 태그를 생성하여 결과를 받기(보통 다운로드에 사용)
+
+  ```js
+  // jQuery
+  let $form = $('<form></form>');
+  $form.attr('action', url);
+  $form.attr('method', 'get');
+  $form.appendTo('body');
+
+  // input 정보 정의
+  let input_1 = $('<input type="hidden" value="'+ value +'" name="name">');
+  let input_2 = $('<input type="hidden" value="'+ value +'" name="name">');
+
+  //전송 전 input 정보 삽입
+  $form.append(input_1).append(input_2);
+
+  //전송 후 $from 제거
+  $form.submit().remove();
+  ```  
 ## 유틸리티
 
 - [6.1](#6.1) <a name='6.1'></a> 기본 유틸리티
@@ -1148,6 +1194,46 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   JSON.parse(str);
   ```
 
+  + parseInt
+
+  정상적인 문자열을 받아서 int형 값을 받습니다.
+
+  ```js
+  // Native
+  parseInt(str);
+
+  // lodash
+  _.parseInt('08');
+  // => 8
+  // or
+  _.map(['6', '08', '10'], _.parseInt);
+  // => [6, 8, 10]
+  ```
+  
+  + repeat
+
+  문자열을 num번 복사하여 새 문자열을 만듭니다.
+
+  ```js
+  // Native
+  str.repeat(num);
+
+  // lodash
+  _.repeat(str, num);
+  ```
+  
+  + split
+
+  문자열을 하위 문자열(-) 배열로 분할 합니다.
+
+  ```js
+  // Native
+  str.split("-");
+
+  // lodash 
+  // 문자열을 하위 문자열(-) 배열로 num의 사이즈로 분할 합니다.
+  _.split(str, '-', num);
+  ```
 ## Promises
 
 Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체적인 promise 처리를 가지고 있습니다. 네이티브 JavaScript엔 [Promises/A+](http://promises-aplus.github.io/promises-spec/) 명세에 맞는 얇고 작은 API를 구현되어 있습니다.
