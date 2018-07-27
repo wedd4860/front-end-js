@@ -828,6 +828,9 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   array.includes(item);
 
   // lodash
+  _.indexOf(array, values);
+
+  // or
   _.findIndex(array,(values) => {
     return values === '값'
   });
@@ -1126,6 +1129,104 @@ namespace와 delegation을 포함해서 완전히 갈아 엎길 원하시면 htt
   Array.from(arrayLike);
   ```
 
+  + compact
+
+  기존 배열에서 false, null, 0, "", undefined, and NaN 을 모두 제거한 배열을 만듭니다.
+
+  ```js
+  // lodash
+  _.compact(array);
+
+  // ex
+  _.compact([0, 1, false, 2, '', 3]);
+  // => [1, 2, 3]
+  ```
+
+  + difference
+
+  두 배열을 비교하여 포함되지 않은 배열의 값을 추출한 새로운 배열로 만듭니다.
+
+  ```js
+  // lodash
+  _.difference(array, [values]);
+
+  // ex
+  _.difference([2, 1], [2, 3]);
+  // => [1]
+  ```
+
+  + flattenDeep
+
+  배열을 새로운 하나의 배열로 만듭니다.
+
+  ```js
+  // lodash
+  _.flattenDeep(array);
+
+  // ex
+  _.flattenDeep([1, [2, [3, [4]], 5]]);
+  // => [1, 2, 3, 4, 5]
+  ```
+
+  + orderBy
+
+  배열 또는 객체의 각 요소를들을 asc or desc 방식으로 정렬하여 배열을 만듭니다.
+
+  ```js
+  // lodash
+  _.orderBy(collection, [iteratees=[_.identity]], [orders])
+
+  // ex
+  var users = [
+    { 'user': 'fred',   'age': 48 },
+    { 'user': 'barney', 'age': 34 },
+    { 'user': 'fred',   'age': 40 },
+    { 'user': 'barney', 'age': 36 }  
+  ];
+  _.orderBy(users, ['user', 'age'], ['asc', 'desc']);
+  // => [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+  ```
+  
+  + groupBy
+
+  배열 또는 객체의 각 요소를 실행 한 결과로 그룹화하여 객체를 만듭니다.
+
+  ```js
+  // lodash
+  _.groupBy(collection, [iteratee=_.identity])
+
+  // ex
+  _.groupBy(['one', 'two', 'three'], 'length');
+  // => { '3': ['one', 'two'], '5': ['three'] }
+  ```
+  
+  + pull
+
+  배열에서 입력한 값을 제거합니다.
+
+  ```js
+  // lodash
+  _.pull(array, [values])
+
+  // ex
+  _.pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c');
+  // => ['b', 'b']
+  ```
+  
+  + remove
+
+  배열의 각 요소를 실행 한 결과에 만족하는 값들을 제거 하여 반환합니다.
+
+  ```js
+  // lodash
+  _.remove(array, [predicate=_.identity])
+
+  // ex
+  _.remove([1, 2, 3, 4], function(n) {
+    return n % 2 == 0;
+  });
+  // => [2, 4]
+  ```
 - [6.2](#6.2) <a name='6.2'></a> Contains
 
   주어진 엘리먼트가 주어진 또 다른 엘리먼트를 자손으로 포함하는지 검사합니다.
