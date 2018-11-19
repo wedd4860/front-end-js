@@ -1,5 +1,5 @@
 ## 개인용으로 사용
-
+브랜치 테스트중 name :: addSample
 라이브러리 URL
 * jQuery : http://jquery.com/
 * lodash : https://lodash.com/
@@ -1392,7 +1392,7 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
         } else {
           reject('failed');
         }
-      }, 1000); 
+      }, 1000);
     });
   }
 
