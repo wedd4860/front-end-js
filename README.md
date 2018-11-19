@@ -1,5 +1,5 @@
 ## 개인용으로 사용
-브랜치 테스트중 name :: addSample
+
 라이브러리 URL
 * jQuery : http://jquery.com/
 * lodash : https://lodash.com/
