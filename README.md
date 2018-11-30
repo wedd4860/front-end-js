@@ -1562,7 +1562,6 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
   $.getScript( "ajax/test.js" );
 
   // or
-  // jQuery
   $.ajax({
     url: url,
     dataType: "script",
