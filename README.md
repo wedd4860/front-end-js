@@ -1553,6 +1553,22 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
   )
   ```
 
+- [9.1](#9.1) <a name='9.1'></a> Animate
+
+  (jQyery)script를 로드 합니다.
+
+  ```js
+  // jQuery
+  $.getScript( "ajax/test.js" );
+
+  // or
+  // jQuery
+  $.ajax({
+    url: url,
+    dataType: "script",
+    success: success
+  });
+  ```
 ## 대안방법
 
 * [You Might Not Need jQuery](http://youmightnotneedjquery.com/) - 일반 자바스크립트로 공통이벤트, 엘리먼트, ajax 등을 다루는 방법 예제.
