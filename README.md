@@ -1555,7 +1555,7 @@ Promise는 비동기적인 작업의 결과를 표현합니다. jQuery는 자체
 
 - [9.1](#9.1) <a name='9.1'></a> getScript 
 
-  (jQyery)script를 로드 합니다.
+  (jQyery)해당 url의 스크립트를 로드 합니다.
 
   ```js
   // jQuery
